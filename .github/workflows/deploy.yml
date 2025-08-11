@@ -1,0 +1,80 @@
+# .github/workflows/deploy.yml
+
+name: 🚀 部署到自有服务器
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: 构建并部署到服务器
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 检出代码
+        uses: actions/checkout@v3
+
+      # 1. 使用官方的 pnpm/action-setup 来安装 pnpm
+      #    这会确保 pnpm 命令在后续步骤中可用
+      - name: 🟢 设置 pnpm
+        uses: pnpm/action-setup@v4
+
+      # 2. 设置 Node.js，并让它使用 pnpm 的缓存
+      #    现在 setup-node 可以正确找到 pnpm 并配置缓存
+      - name: 🟢 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: 📦 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 🔨 构建项目
+        run: pnpm run build
+        env:
+          NODE_ENV: production
+
+      - name: 🚚 使用 rsync 上传构建文件
+        uses: burnett01/rsync-deployments@7.0.2
+        with:
+          switches: -avz --delete
+          path: ./dist/
+          remote_path: /var/www/ranon/
+          remote_host: ${{ secrets.HOST }}
+          remote_user: ${{ secrets.USERNAME }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # - name: 🔧 设置文件权限
+      #   uses: appleboy/ssh-action@v1.0.0
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     script_stop: true
+      #     script: |
+      #       sudo chown -R deploy:www-data /var/www/ranon
+      #       chmod -R 755 /var/www/ranon
+      #       echo "✅ 权限设置完成"
+
+      - name: 🔄 重载 Nginx
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script_stop: true
+          script: |
+            echo "🔄 检测 Nginx 配置并重载"
+            if sudo nginx -t; then
+              sudo systemctl reload nginx
+              echo "✅ Nginx 重载成功"
+            else
+              echo "❌ Nginx 配置错误，部署中断"
+              exit 1
+            fi
+
+      - name: 🎉 部署完成提示
+        run: echo "🎉 部署成功！访问：https://${{ secrets.HOST }}"
