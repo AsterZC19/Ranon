@@ -1,0 +1,84 @@
+---
+title: hello-world
+published: 2025-08-12
+description: 'Init Blog'
+image: ''
+tags: [Hello]
+category: 'Hello'
+draft: true
+lang: ''
+---
+## GitHub Repository Cards
+
+You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API.
+
+::github{repo="AsterZC19/Game_Rules"}
+
+Create a GitHub repository card with the code `::github{repo="<owner>/<repo>"}`.
+
+```markdown
+::github{repo="AsterZC19/Game_Rules"}
+```
+
+## Admonitions
+
+Following types of admonitions are supported: `note` `tip` `important` `warning` `caution`
+
+:::note
+Highlights information that users should take into account, even when skimming.
+:::
+
+:::tip
+Optional information to help a user be more successful.
+:::
+
+:::important
+Crucial information necessary for users to succeed.
+:::
+
+:::warning
+Critical content demanding immediate user attention due to potential risks.
+:::
+
+:::caution
+Negative potential consequences of an action.
+:::
+
+### Basic Syntax
+
+```markdown
+:::note
+Highlights information that users should take into account, even when skimming.
+:::
+
+:::tip
+Optional information to help a user be more successful.
+:::
+```
+
+### Custom Titles
+
+The title of the admonition can be customized.
+
+:::note[MY CUSTOM TITLE]
+This is a note with a custom title.
+:::
+
+```markdown
+:::note[MY CUSTOM TITLE]
+This is a note with a custom title.
+:::
+```
+
+### GitHub Syntax
+
+> [!TIP]
+> [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
+
+```
+> [!NOTE]
+> The GitHub syntax is also supported.
+
+> [!TIP]
+> The GitHub syntax is also supported.
+```
