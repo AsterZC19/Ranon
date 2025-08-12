@@ -6,12 +6,12 @@ export const LIGHT_MODE = "light",
 export const DEFAULT_THEME = AUTO_MODE;
 
 // Banner height unit: vh
-export const BANNER_HEIGHT = 42;
-export const BANNER_HEIGHT_EXTEND = 25;
+export const BANNER_HEIGHT = 60;
+export const BANNER_HEIGHT_EXTEND = 20;
 export const BANNER_HEIGHT_HOME = BANNER_HEIGHT + BANNER_HEIGHT_EXTEND;
 
 // The height the main panel overlaps the banner, unit: rem
-export const MAIN_PANEL_OVERLAPS_BANNER_HEIGHT = 3.5;
+export const MAIN_PANEL_OVERLAPS_BANNER_HEIGHT = 4;
 
 // Page width: rem
 export const PAGE_WIDTH = 75;
