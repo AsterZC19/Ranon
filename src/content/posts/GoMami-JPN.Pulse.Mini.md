@@ -2,7 +2,7 @@
 title: GoMami-JPN.Pulse.Mini 测试
 published: 2025-09-20
 description: '测试留档'
-image: '..\..\assets\images\demo-banner.png'
+image: '../../assets/images/demo-banner.png'
 tags: [VPS]
 category: '测试'
 draft: false 
