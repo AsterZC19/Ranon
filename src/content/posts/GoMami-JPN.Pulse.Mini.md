@@ -89,15 +89,15 @@ Full Test       | https://browser.geekbench.com/v5/cpu/23796642
 
 ## 🎬IP质量
 
- ![image](https://i.111666.best/image/hcoZOi65d98GNqYJo1Fz37.webp)
+ ![image](../../assets/images/GoMamiJP/hcoZOi65d98GNqYJo1Fz37.webp)
 
 ## 🌐网络质量
 
- ![image](https://i.111666.best/image/mUnx7JJHmnShPasZYhtB0O.webp)
+ ![image](../../assets/images/GoMamiJP/mUnx7JJHmnShPasZYhtB0O.webp)
 
 ## 📍回程路由
 
- ![image](https://i.111666.best/image/6IQpV3tEVS3lk5QxcolwAv.webp)
+ ![image](../../assets/images/GoMamiJP/6IQpV3tEVS3lk5QxcolwAv.webp)
 
 # 总结
 
