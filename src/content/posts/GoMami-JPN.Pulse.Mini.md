@@ -19,12 +19,17 @@ lang: ''
 
 因为 25 年初没有方法开通 TG 会员与 Sharon 机器失之交臂，同时在 DMIT 的 JP.PRO 跨网出现问题的现在首发购入了 GoMami-JPN.Pulse.Mini。
 
+## 2025/10/18 更新
+
+- 于 2025/10/9 日本回程切至 cn2/9929/58807（去程不变）
+- 于 2025/10/12 提高不同配置的速率限制。
+
 ## 当前售卖套餐
 
 | 型号 | CPU | 内存 | 硬盘 | 流量 | 带宽 | 附加功能 | 价格（月付） |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| JPN.Pulse.Mini | 2x vCPUs | 4GB | 40GB NVME SSD | 1000GB | 1Gbps | China Mainland Optimized Pro | $49.00 USD |
-| JPN.Pulse.Air | 4x vCPUs | 8GB | 60GB NVME SSD | 2000GB | 1Gbps | China Mainland Optimized Pro | $89.00 USD |
+| JPN.Pulse.Mini | 2x vCPUs | 4GB | 40GB NVME SSD | 1000GB | 1.5Gbps | China Mainland Optimized Pro | $49.00 USD |
+| JPN.Pulse.Air | 4x vCPUs | 8GB | 60GB NVME SSD | 2000GB | 2Gbps | China Mainland Optimized Pro | $89.00 USD |
 | JPN.Pulse.Pro | 8x vCPUs | 16GB | 80GB NVME SSD | 5000GB | 3Gbps | Windows-ready, China Mainland Optimized Pro | $169.00 USD |
 
 # 测试结果
