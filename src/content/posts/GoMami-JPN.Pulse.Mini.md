@@ -100,6 +100,10 @@ Full Test       | https://browser.geekbench.com/v5/cpu/23796642
 
  ![image](../../assets/images/GoMamiJP/mUnx7JJHmnShPasZYhtB0O.webp)
 
+### 更新路由后网络质量
+
+ ![image](../../assets/images/GoMamiJP/20251018.png)
+
 ## 📍回程路由
 
  ![image](../../assets/images/GoMamiJP/6IQpV3tEVS3lk5QxcolwAv.webp)
